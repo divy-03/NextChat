@@ -1,3 +1,5 @@
+"use client";
+
 import { UserButton } from "@clerk/nextjs";
 import { MessageSquare, Users, Shield, Zap } from "lucide-react";
 // import Button from "@/components/ui/Button";
@@ -6,10 +8,10 @@ import Link from "next/link";
 const Navbar = () => {
   return (
     <nav className="container mx-auto px-4 py-6 flex items-center justify-between">
-      <div className="flex items-center space-x-2">
+      <Link href={"/"} className="flex items-center space-x-2">
         <MessageSquare className="h-6 w-6 text-purple-600" />
         <span className="text-xl font-bold">ChatApp</span>
-      </div>
+      </Link>
       <div className="hidden md:flex space-x-6">
         <Link
           href="#features"
@@ -37,7 +39,7 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="flex space-x-3">
-       <UserButton />
+        <UserButton />
       </div>
     </nav>
   );

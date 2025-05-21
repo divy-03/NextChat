@@ -1,38 +1,10 @@
-import Link from "next/link";
+import Image from "next/image"; // Import Image from Next.js
 import { MessageSquare, Users, Shield, Zap } from "lucide-react";
-import Button from "@/components/ui/Button";
+import { Button } from "@/components/ui/button";
 
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
-      {/* Navigation */}
-      {/* <nav className="container mx-auto px-4 py-6 flex items-center justify-between">
-        <div className="flex items-center space-x-2">
-          <MessageSquare className="h-6 w-6 text-purple-600" />
-          <span className="text-xl font-bold">ChatApp</span>
-        </div>
-        <div className="hidden md:flex space-x-6">
-          <Link
-            href="#features"
-            className="text-gray-600 hover:text-purple-600 transition">
-            Features
-          </Link>
-          <Link
-            href="#how-it-works"
-            className="text-gray-600 hover:text-purple-600 transition">
-            How it works
-          </Link>
-          <Link href="#faq" className="text-gray-600 hover:text-purple-600 transition">
-            FAQ
-          </Link>
-        </div>
-        <div className="flex space-x-3">
-          <Button variant="outline" className="hidden md:inline-flex">
-            Log in
-          </Button>
-          <Button className="bg-purple-600 hover:bg-purple-700">Sign up</Button>
-        </div>
-      </nav> */}
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-20 flex flex-col md:flex-row items-center">
         <div className="md:w-1/2 mb-10 md:mb-0">
@@ -58,9 +30,11 @@ export default function HomePage() {
             <div className="absolute -bottom-8 right-4 w-72 h-72 bg-yellow-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
             <div className="absolute -bottom-8 -left-20 w-72 h-72 bg-pink-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
             <div className="relative">
-              <img
+              <Image
                 src="https://i.ibb.co/yBWzdJmw/chat.png"
                 alt="Chat app interface preview"
+                width={600} // Adjust width as needed
+                height={600} // Adjust height as needed
                 // className="rounded-lg shadow-2xl"
               />
             </div>
@@ -147,115 +121,6 @@ export default function HomePage() {
           </Button>
         </div>
       </section>
-      {/* Footer */}
-      {/* <footer className="bg-gray-900 text-white py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <MessageSquare className="h-6 w-6 text-purple-400" />
-                <span className="text-xl font-bold">ChatApp</span>
-              </div>
-              <p className="text-gray-400">
-                A simple, secure, and fast way to chat with your friends and
-                family.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Product</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link
-                    href="#"
-                    className="text-gray-400 hover:text-white transition"
-                  >
-                    Features
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="text-gray-400 hover:text-white transition"
-                  >
-                    Security
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="text-gray-400 hover:text-white transition"
-                  >
-                    Pricing
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Company</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link
-                    href="#"
-                    className="text-gray-400 hover:text-white transition"
-                  >
-                    About
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="text-gray-400 hover:text-white transition"
-                  >
-                    Blog
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="text-gray-400 hover:text-white transition"
-                  >
-                    Careers
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Legal</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link
-                    href="#"
-                    className="text-gray-400 hover:text-white transition"
-                  >
-                    Privacy
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="text-gray-400 hover:text-white transition"
-                  >
-                    Terms
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="text-gray-400 hover:text-white transition"
-                  >
-                    Cookie Policy
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-            <p>
-              &copy; {new Date().getFullYear()} ChatApp. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer> */}
     </div>
   );
 }

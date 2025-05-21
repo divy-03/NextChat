@@ -1,27 +1,30 @@
+import Image from "next/image";
+import Link from "next/link";
+
 const topics = [
   {
     text: "Python",
     img: "/images/python.png",
-    link: "/forums/python",
+    link: "/forum/python",
     description: "Discuss all things Python, from beginner to advanced topics.",
   },
   {
     text: "JavaScript",
     img: "/images/javascript.png",
-    link: "/forums/javascript",
+    link: "/forum/javascript",
     description: "Share your JavaScript knowledge and learn from others.",
   },
   {
     text: "React",
     img: "/images/react.png",
-    link: "/forums/react",
+    link: "/forum/react",
     description:
       "Join discussions about React, its ecosystem, and best practices.",
   },
   {
     text: "Node.js",
     img: "/images/nodejs.png",
-    link: "/forums/nodejs",
+    link: "/forum/nodejs",
     description: "Talk about Node.js, Express, and server-side JavaScript.",
   },
 ];
@@ -36,19 +39,21 @@ export default function Forums() {
             key={index}
             className="p-6 border rounded-lg shadow hover:shadow-lg transition"
           >
-            <img
+            {/* <Image
               src={topic.img}
               alt={topic.text}
+              width={64}
+              height={64}
               className="w-16 h-16 mb-4 mx-auto"
-            />
+            /> */}
             <h2 className="text-xl font-semibold mb-2">{topic.text}</h2>
             <p className="text-gray-600 mb-4">{topic.description}</p>
-            <a
+            <Link
               href={topic.link}
               className="text-blue-500 hover:underline font-medium"
             >
               Visit {topic.text} Forum
-            </a>
+            </Link>
           </div>
         ))}
       </div>

@@ -1,6 +1,6 @@
 import Image from "next/image"; // Import Image from Next.js
 import { MessageSquare, Users, Shield, Zap } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 
 export default function HomePage() {
   return (

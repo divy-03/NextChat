@@ -5,26 +5,26 @@ const topics = [
   {
     text: "Python",
     img: "/images/python.png",
-    link: "/forum/python",
+    link: "/forum/py",
     description: "Discuss all things Python, from beginner to advanced topics.",
   },
   {
     text: "JavaScript",
     img: "/images/javascript.png",
-    link: "/forum/javascript",
+    link: "/forum/js",
     description: "Share your JavaScript knowledge and learn from others.",
   },
   {
     text: "React",
     img: "/images/react.png",
-    link: "/forum/react",
+    link: "/forum/reactjs",
     description:
       "Join discussions about React, its ecosystem, and best practices.",
   },
   {
     text: "Node.js",
     img: "/images/nodejs.png",
-    link: "/forum/nodejs",
+    link: "/forum/node",
     description: "Talk about Node.js, Express, and server-side JavaScript.",
   },
 ];
